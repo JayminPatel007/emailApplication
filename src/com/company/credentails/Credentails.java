@@ -13,8 +13,8 @@ public class Credentails {
         this.employee = employee;
     }
 
-    public String generateEmailAddress() {
-        return employee.getFirstName() + employee.getLastName() + "@"
+    public void generateEmailAddress() {
+        this.email =  employee.getFirstName() + employee.getLastName() + "@"
                 + employee.getDepartment() + "." + employee.getDepartment()
                 + ".com";
     }
@@ -27,7 +27,7 @@ public class Credentails {
         String str = "";
         Random random = new Random();
         for (int i = 0; i < noOfChar; i++) {
-            str += (char) (random.nextInt(106) + '!');
+            str += (char) (random.nextInt(106) + '!' + 1);
         }
         return str;
     }
